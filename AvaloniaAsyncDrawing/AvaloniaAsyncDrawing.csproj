@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.4" />
+    <PackageReference Include="SkiaSharp" Version="3.119.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drawing\**\*.cs" />
+    <Compile Include="Models\**\*.cs" />
+    <Compile Include="Utils\**\*.cs" />
+    <Compile Include="ViewModels\**\*.cs" />
+    <Compile Include="Commands\**\*.cs" />
+    <Compile Include="Views\**\*.cs" />
+  </ItemGroup>
+
+</Project>

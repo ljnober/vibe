@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaAsyncDrawing.Demo.MainWindow"
+        Title="AvaloniaAsyncDrawing.Demo">
+    <DockPanel>
+        <!-- 菜单栏 -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="文件">
+                <MenuItem Header="导入..." Command="{Binding ImportCommand}" InputGesture="Ctrl+I"/>
+                <MenuItem Header="导出..." Command="{Binding ExportCommand}" InputGesture="Ctrl+E"/>
+            </MenuItem>
+        </Menu>
+        <!-- 工具栏 -->
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Content="导入" Command="{Binding ImportCommand}" ToolTip.Tip="导入 (Ctrl+I)"/>
+                <Button Content="导出" Command="{Binding ExportCommand}" ToolTip.Tip="导出 (Ctrl+E)"/>
+            </ToolBar>
+        </ToolBarTray>
+        <!-- 主内容区 -->
+        <Grid>
+            <TextBlock Text="Welcome to Avalonia!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding StatusMessage}" Margin="10" VerticalAlignment="Bottom" Foreground="DarkGreen"/>
+        </Grid>
+    </DockPanel>
+</Window>

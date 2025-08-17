@@ -2,9 +2,8 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace AvaloniaAsyncDrawingControl;
-
-public partial class App : Application
+namespace AvaloniaAsyncDrawing.Demo
+{public partial class App : Application
 {
     public override void Initialize()
     {
@@ -20,4 +19,5 @@ public partial class App : Application
 
         base.OnFrameworkInitializationCompleted();
     }
+}
 }
